@@ -498,7 +498,6 @@ html {
 html {
   font-family: "Mona Sans", system-ui, sans-serif;
   font-size: 16px;
-  /* scroll-behavior: smooth; */
 }
 
 *::-moz-selection {
