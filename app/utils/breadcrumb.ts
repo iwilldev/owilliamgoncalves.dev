@@ -26,3 +26,8 @@ export const breadcrumbCurriculo = [
   ...breadcrumbIndex,
   { label: "curriculo", href: "/curriculo" },
 ];
+
+export const breadcrumbLinks = [
+  ...breadcrumbIndex,
+  { label: "links", href: "/links" },
+];

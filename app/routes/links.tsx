@@ -2,7 +2,7 @@ import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import ogImage from "~/assets/meta/index.jpg";
 import indexImage from "~/assets/images/index.png";
 import { links } from "~/data/pages/links/links";
-import { breadcrumbSkills } from "~/utils/breadcrumb";
+import { breadcrumbLinks } from "~/utils/breadcrumb";
 import { useEffect } from "react";
 import { useLoaderData } from "@remix-run/react";
 import { useBreadcrumb } from "~/hooks/useBreadcrumb";
@@ -32,7 +32,7 @@ export const loader: LoaderFunction = async () => {
 export default function Links() {
   const { setBreadcrumb } = useBreadcrumb();
   useEffect(() => {
-    setBreadcrumb(breadcrumbSkills);
+    setBreadcrumb(breadcrumbLinks);
   }, []);
   const data = useLoaderData<LinksPageProps>();
   return <LinksPage data={data} />;

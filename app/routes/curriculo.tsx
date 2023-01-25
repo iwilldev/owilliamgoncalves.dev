@@ -8,7 +8,7 @@ import { courses } from "~/data/pages/curriculo/courses.server";
 import { educations } from "~/data/pages/curriculo/educations.server";
 import { experiences } from "~/data/pages/curriculo/experiences.server";
 import { useBreadcrumb } from "~/hooks/useBreadcrumb";
-import { breadcrumbSobre } from "~/utils/breadcrumb";
+import { breadcrumbCurriculo } from "~/utils/breadcrumb";
 import type { CurriculoPageProps } from "~/utils/types";
 import { CurriculoPage } from "~/features/CurriculoPage";
 
@@ -36,7 +36,7 @@ export const loader: LoaderFunction = async () => {
 export default function Curriculo() {
   const { setBreadcrumb } = useBreadcrumb();
   useEffect(() => {
-    setBreadcrumb(breadcrumbSobre);
+    setBreadcrumb(breadcrumbCurriculo);
   }, []);
   const data = useLoaderData<CurriculoPageProps>();
   return <CurriculoPage data={data} />;
