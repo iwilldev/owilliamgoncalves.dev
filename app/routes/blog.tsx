@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => ({
   title: "Blog - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Meus artigos publicados na Dev Community",
-  "og:image": ogImage,
+  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
   "og:title": "Blog",
   "og:description": "Meus artigos publicados na Dev Community",
   "og:url": "https://owilliamgoncalves.dev/blog",

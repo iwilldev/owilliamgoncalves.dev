@@ -25,7 +25,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",
-  "og:image": ogImage,
+  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
   "og:title": "William Gonçalves",
   "og:description":
     "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",

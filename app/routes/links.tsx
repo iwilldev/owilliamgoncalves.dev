@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => ({
   title: "Links - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Me liga, me manda um telegramaaaa...",
-  "og:image": ogImage,
+  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
   "og:title": "Links",
   "og:description": "Me liga, me manda um telegramaaaa...",
   "og:url": "https://owilliamgoncalves.dev/skills",

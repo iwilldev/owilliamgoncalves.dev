@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => ({
   title: "Currículo - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Minha trajetória e experiências até aqui",
-  "og:image": ogImage,
+  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
   "og:title": "Currículo",
   "og:description": "Minha trajetória e experiências até aqui",
   "og:url": "https://owilliamgoncalves.dev/curriculo",
