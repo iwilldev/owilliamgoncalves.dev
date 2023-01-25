@@ -94,3 +94,8 @@ export type CurriculoPageProps = {
   educations: EducationProps[];
   courses: CourseProps[];
 }
+
+export type LayoutContextProps = {
+  breadcrumb: BreadcrumbProps[];
+  setBreadcrumb: (breadcrumb: BreadcrumbProps[]) => void;
+};

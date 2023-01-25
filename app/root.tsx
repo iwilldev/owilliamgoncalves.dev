@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link, useCatch } from "@remix-run/react";
+import { Link, Outlet, useCatch } from "@remix-run/react";
 import {
   Links,
   LiveReload,
@@ -7,7 +7,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import Layout from "./components/layout/Layout";
 import styles from "./styles/app.css";
 import ogImage from "./assets/meta/index.jpg";
 import { Container } from "./components/layout/Container";
@@ -16,6 +15,9 @@ import { SectionRight } from "./components/layout/SectionRight";
 import { LayoutBackground } from "./components/layout/LayoutBackground";
 import ronaldinho from "./assets/images/ronaldinho-gaucho.jpg";
 import plift from "./assets/images/plift.jpg";
+import { LayoutNavbar } from "./components/layout/LayoutNavbar";
+import { useState } from "react";
+import type { BreadcrumbProps } from "./utils/types";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -143,6 +145,9 @@ export function links() {
 }
 
 export default function App() {
+  const [breadcrumb, setBreadcrumb] = useState<BreadcrumbProps[]>([
+    { label: "owilliamgoncalves.dev", href: "/" },
+  ]);
   return (
     <html lang="pt-br" className="h-full w-full">
       <head>
@@ -150,7 +155,11 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full w-full scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-primary">
-        <Layout />
+        <LayoutNavbar breadcrumb={breadcrumb} />
+        <LayoutBackground />
+        <div className="flex flex-1 flex-col items-center overflow-x-hidden">
+          <Outlet context={{ breadcrumb, setBreadcrumb }} />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

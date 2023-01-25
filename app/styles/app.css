@@ -498,7 +498,7 @@ html {
 html {
   font-family: "Mona Sans", system-ui, sans-serif;
   font-size: 16px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 *::-moz-selection {
@@ -4180,14 +4180,24 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.my-auto {
+.mt-auto {
   margin-top: auto;
-  margin-bottom: auto;
 }
 
-.my-10 {
+.mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mt-0 {
@@ -4202,16 +4212,8 @@ html {
   margin-bottom: 3rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .mr-auto {
   margin-right: auto;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .mb-8 {
@@ -4224,18 +4226,6 @@ html {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .block {
@@ -4252,6 +4242,10 @@ html {
 
 .h-full {
   height: 100%;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .h-40 {
@@ -4278,16 +4272,16 @@ html {
   height: 6rem;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-80 {
@@ -4326,10 +4320,6 @@ html {
   width: 12rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -4348,18 +4338,6 @@ html {
 
 .max-w-\[24rem\] {
   max-width: 24rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
 }
 
 .flex-1 {
@@ -4463,12 +4441,12 @@ html {
   white-space: pre-line;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-\[1rem\] {
@@ -4500,14 +4478,14 @@ html {
      object-fit: cover;
 }
 
-.object-left {
-  -o-object-position: left;
-     object-position: left;
-}
-
 .object-top {
   -o-object-position: top;
      object-position: top;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-4 {
@@ -4533,8 +4511,9 @@ html {
   padding-right: 0.5rem;
 }
 
-.text-center {
-  text-align: center;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-xl {
@@ -4547,27 +4526,12 @@ html {
   line-height: 1.75rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-
-.text-primary-content {
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
+.font-medium {
+  font-weight: 500;
 }
 
 .text-stone-400 {
@@ -4575,14 +4539,14 @@ html {
   color: rgb(168 162 158 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-primary-content {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
-.text-stone-500 {
+.text-primary {
   --tw-text-opacity: 1;
-  color: rgb(120 113 108 / var(--tw-text-opacity));
+  color: hsl(var(--p) / var(--tw-text-opacity));
 }
 
 .underline {
@@ -4787,8 +4751,4 @@ html {
   .xl\:w-\[30vw\] {
     width: 30vw;
   }
-}
-
-.\[\&\>\:not\(a\)\]\:hidden>:not(a) {
-  display: none;
 }
