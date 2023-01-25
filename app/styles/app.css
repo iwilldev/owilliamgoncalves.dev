@@ -523,7 +523,7 @@ h1,
 }
 
 html {
-  font-size: clamp(0.8rem, 1vw, 1.8rem);
+  font-size: clamp(0.9rem, 1vw, 1.8rem);
 }
 
 .navbar .dropdown-content.menu li link {
