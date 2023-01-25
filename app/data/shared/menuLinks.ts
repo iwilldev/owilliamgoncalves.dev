@@ -24,6 +24,10 @@ const menuLinks: MenuLinkProps[] = [
     label: "Currículo",
     href: "/curriculo",
   },
+  {
+    label: "Contatos / Links",
+    href: "/links",
+  },
 ];
 
 export default menuLinks;
