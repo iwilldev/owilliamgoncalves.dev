@@ -1,8 +1,8 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import ogImage from "~/assets/meta/skills.jpg";
-import { proSkills } from "~/data/skills/pro";
-import { beginnerSkills } from "~/data/skills/beginner";
-import { studySkills } from "~/data/skills/study";
+import { proSkills } from "~/data/pages/skills/pro";
+import { beginnerSkills } from "~/data/pages/skills/beginner";
+import { studySkills } from "~/data/pages/skills/study";
 import { breadcrumbSkills } from "~/utils/breadcrumb";
 import { useEffect } from "react";
 import { SkillsPage } from "~/features/SkillsPage";
