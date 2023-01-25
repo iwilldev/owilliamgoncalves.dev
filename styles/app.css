@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Mona Sans";
+    src: url("app/assets/fonts/Mona-Sans.woff2")
+        format("woff2 supports variations"),
+      url("app/assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
+  @font-face {
+    font-family: "Hubot Sans";
+    src: url("app/assets/fonts/Hubot-Sans.woff2")
+        format("woff2 supports variations"),
+      url("app/assets/fonts/Hubot-Sans.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
+  html {
+    font-family: "Mona Sans", system-ui, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  *::selection {
+    @apply bg-primary text-stone-400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .navbar * {
+    font-family: "Hubot Sans", system-ui, sans-serif;
+  }
+
+  html {
+    font-size: clamp(0.8rem, 1vw, 1.8rem);
+  }
+
+  .navbar .dropdown-content.menu li link {
+    @apply hidden;
+  }
+
+  @keyframes family-photos {
+    0% {
+      transform: scale(0) rotate(var(--rotate-photo));
+      opacity: 0;
+    }
+  }
+
+  @keyframes from-barely-visible {
+    0% {
+      @apply opacity-20;
+    }
+    100% {
+      @apply opacity-100;
+    }
+  }
+
+  .animate-family-photos {
+    @apply animate-[family-photos_0.5s_ease-in-out] opacity-100;
+  }
+
+  .animate-from-barely-visible {
+    @apply animate-[from-barely-visible_0.5s_ease-in-out];
+  }
+
+  .non-animate {
+    @apply animate-none opacity-0;
+  }
+
+  .gh-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .gh-link {
+    position: relative;
+  }
+
+  .gh-link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    @apply bg-primary;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  .gh-link::after {
+    position: absolute;
+    right: 0.05em;
+    bottom: 0;
+    left: 0.05em;
+    z-index: -1;
+    display: block;
+    height: 2px;
+    content: "";
+    @apply bg-primary;
+    transition: transform 0.3s ease;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .gh-link:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  .gh-char {
+    --add: 0;
+    position: relative;
+    z-index: calc(1 + var(--add) * 2);
+    display: inline-block;
+    font-weight: calc(300 + 600 * var(--add));
+    font-stretch: calc(100% + 25% * var(--add));
+    transition: transform 0.2s, color 0.2s, font-stretch 0.2s, font-weight 0.2s;
+  }
+
+  .gh-char:hover + .gh-char + .gh-char + .gh-char,
+  .gh-char:has(+ .gh-char + .gh-char + .gh-char:hover) {
+    --add: 0.2;
+  }
+
+  .gh-char:hover + .gh-char + .gh-char,
+  .gh-char:has(+ .gh-char + .gh-char:hover) {
+    --add: 0.45;
+  }
+
+  .gh-char:hover + .gh-char,
+  .gh-char:has(+ .gh-char:hover) {
+    --add: 0.7;
+  }
+
+  .gh-char:hover {
+    --add: 1;
+  }
+
+  /* Styles for blog posts */
+
+  .blog-card {
+    @apply animate-from-barely-visible non-animate card relative w-96 transform bg-base-300 shadow-xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-primary;
+  }
+
+  .post-body {
+    @apply prose-lg prose mt-20 w-full max-w-5xl text-stone-400 animation-duration-1000 prose-code:bg-stone-900 prose-code:font-medium prose-code:text-stone-100 prose-pre:border-[2px] prose-pre:border-primary prose-pre:bg-stone-900 [&>.highlight>.js-actions-panel]:hidden;
+  }
+
+  /*!
+    Theme: GitHub Dark
+    Description: Dark theme as seen on github.com
+    Author: github.com
+    Maintainer: @Hirse
+    Updated: 2021-05-15
+
+    Outdated base version: https://github.com/primer/github-syntax-dark
+    Current colors taken from GitHub's CSS
+  */
+
+  .post-body pre {
+    @apply scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-primary;
+  }
+
+  .post-body a {
+    @apply gh-link;
+  }
+
+  .prose .hljs {
+    @apply text-stone-100;
+    @apply bg-stone-900;
+  }
+
+  .prose .hljs-doctag,
+  .prose .hljs-keyword,
+  .prose .hljs-meta .hljs-keyword,
+  .prose .hljs-template-tag,
+  .prose .hljs-template-variable,
+  .prose .hljs-type,
+  .prose .hljs-variable.language_ {
+    /* prettylights-syntax-keyword */
+    color: #ff7b72;
+  }
+
+  .prose .hljs-title,
+  .prose .hljs-title.class_,
+  .prose .hljs-title.class_.inherited__,
+  .prose .hljs-title.function_ {
+    /* prettylights-syntax-entity */
+    color: #d2a8ff;
+  }
+
+  .prose .hljs-attr,
+  .prose .hljs-attribute,
+  .prose .hljs-literal,
+  .prose .hljs-meta,
+  .prose .hljs-number,
+  .prose .hljs-operator,
+  .prose .hljs-variable,
+  .prose .hljs-selector-attr,
+  .prose .hljs-selector-class,
+  .prose .hljs-selector-id {
+    /* prettylights-syntax-constant */
+    color: #79c0ff;
+  }
+
+  .prose .hljs-regexp,
+  .prose .hljs-string,
+  .prose .hljs-meta .hljs-string {
+    /* prettylights-syntax-string */
+    color: #a5d6ff;
+  }
+
+  .prose .hljs-built_in,
+  .prose .hljs-symbol {
+    /* prettylights-syntax-variable */
+    color: #ffa657;
+  }
+
+  .prose .hljs-comment,
+  .prose .hljs-code,
+  .prose .hljs-formula {
+    /* prettylights-syntax-comment */
+    color: #8b949e;
+  }
+
+  .prose .hljs-name,
+  .prose .hljs-quote,
+  .prose .hljs-selector-tag,
+  .prose .hljs-selector-pseudo {
+    /* prettylights-syntax-entity-tag */
+    color: #7ee787;
+  }
+
+  .prose .hljs-subst {
+    /* prettylights-syntax-storage-modifier-import */
+    color: #c9d1d9;
+  }
+
+  .prose .hljs-section {
+    /* prettylights-syntax-markup-heading */
+    color: #1f6feb;
+    font-weight: bold;
+  }
+
+  .prose .hljs-bullet {
+    /* prettylights-syntax-markup-list */
+    color: #f2cc60;
+  }
+
+  .prose .hljs-emphasis {
+    /* prettylights-syntax-markup-italic */
+    color: #c9d1d9;
+    font-style: italic;
+  }
+
+  .prose .hljs-strong {
+    /* prettylights-syntax-markup-bold */
+    color: #c9d1d9;
+    font-weight: bold;
+  }
+
+  .prose .hljs-addition {
+    /* prettylights-syntax-markup-inserted */
+    color: #aff5b4;
+    background-color: #033a16;
+  }
+
+  .prose .hljs-deletion {
+    /* prettylights-syntax-markup-deleted */
+    color: #ffdcd7;
+    background-color: #67060c;
+  }
+}
