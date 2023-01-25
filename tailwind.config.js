@@ -13,7 +13,7 @@ module.exports = {
     themes: [
       {
         will: {
-          "primary": "#C91D42",
+          "primary": "#9C1734",
           "secondary": "#28bE78",
           "accent": "#11AED5",
           "neutral": "#292D22",
