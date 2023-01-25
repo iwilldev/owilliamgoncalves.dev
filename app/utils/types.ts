@@ -99,3 +99,14 @@ export type LayoutContextProps = {
   breadcrumb: BreadcrumbProps[];
   setBreadcrumb: (breadcrumb: BreadcrumbProps[]) => void;
 };
+
+export type LinkProps = {
+  icon: string;
+  label: string;
+  href: string;
+}
+
+export type LinksPageProps = {
+  links: LinkProps[];
+  indexImage: string;
+}
