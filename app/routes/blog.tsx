@@ -22,12 +22,14 @@ export const meta: MetaFunction = () => ({
   "og:type": "website",
 });
 
-export const loader: LoaderFunction = async () => {
+export const loader: LoaderFunction = async ({ request }) => {
+  const searchParams = new URL(request.url).searchParams;
+  const page = searchParams.get("page") || "1";
   const posts = await fetch(
-    "https://dev.to/api/articles/?username=owilliamgoncalves"
-  );
+    `https://dev.to/api/articles/latest?username=owilliamgoncalves&per_page=10&page=${page}`
+  ).then((res) => res.json());
   return json<BlogPageProps>({
-    posts: await posts.json(),
+    posts,
   });
 };
 
