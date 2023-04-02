@@ -2,10 +2,17 @@ import type { ExperienceProps } from "~/utils/types";
 
 export const experiences: ExperienceProps[] = [
   {
+    company: "ConstruCode",
+    role: "Desenvolvedor Front-End Pleno",
+    startDate: "MARÇO/2023",
+    endDate: "atualmente",
+    description: `Desenvolvimento de aplicações front-end utilizando Next.js, React, Tailwind, Storybook e Vitest.`
+  },
+  {
     company: "Virgo Inc",
     role: "Desenvolvedor Front-End Pleno",
     startDate: "JULHO/2022",
-    endDate: "ATUALMENTE",
+    endDate: "FEVEREIRO/2023",
     description: `Desenvolvimento de aplicações front-end utilizando Remix, React, Material-UI, Storybook, Vitest, Domain Functions e Remix-Forms. Voltando às raízes da Web, nesse projeto, temos trabalhado as regras de negócio, além da composição e sanitização de dados, no server-side.
     
     No client-side, buscamos otimizar UX, acessibilidade e diminuir a responsabilidade do que é renderizado no browser: o “lado mais front” exibe dados prontos, devolve form data e interage com o “core” da aplicação através da URL, com ou sem parâmetros.`
