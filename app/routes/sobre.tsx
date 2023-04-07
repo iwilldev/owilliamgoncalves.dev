@@ -3,7 +3,6 @@ import type { MetaFunction } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useEffect } from "react";
-import ogImage from "~/assets/meta/sobre.jpg";
 import { aboutText1, aboutText2, aboutText3 } from "~/data/pages/sobre/text";
 import {
   aboutBanger,
@@ -21,7 +20,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Flamenguista e carioca, que divide a vida entre a Zona Oeste do Rio de Janeiro e a Zona Leste de São Paulo",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/sobre.jpg`,
   "og:title": "Sobre",
   "og:description":
     "Flamenguista e carioca, que divide a vida entre a Zona Oeste do Rio de Janeiro e a Zona Leste de São Paulo",

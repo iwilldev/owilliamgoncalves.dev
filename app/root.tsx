@@ -8,13 +8,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./styles/app.css";
-import ogImage from "./assets/meta/index.jpg";
 import { Container } from "./components/layout/Container";
 import { SectionLeft } from "./components/layout/SectionLeft";
 import { SectionRight } from "./components/layout/SectionRight";
 import { LayoutBackground } from "./components/layout/LayoutBackground";
-import ronaldinho from "./assets/images/ronaldinho-gaucho.jpg";
-import plift from "./assets/images/plift.jpg";
 import { LayoutNavbar } from "./components/layout/LayoutNavbar";
 import { useState } from "react";
 import type { BreadcrumbProps } from "./utils/types";
@@ -25,7 +22,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/index.jpg`,
   "og:title": "William Gonçalves",
   "og:description":
     "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",
@@ -71,7 +68,7 @@ export function CatchBoundary() {
           </SectionLeft>
           <SectionRight>
             <img
-              src={ronaldinho}
+              src="/assets/images/ronaldinho-gaucho.jpg"
               alt=""
               className="ml-auto h-96 w-96 rounded-full object-cover object-top"
             />
@@ -113,7 +110,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
           </SectionLeft>
           <SectionRight>
             <img
-              src={plift}
+              src="/assets/images/plift.jpg"
               alt=""
               className="rounded-box ml-auto h-96 w-96 object-cover object-top"
             />

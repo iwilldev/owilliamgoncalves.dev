@@ -1,6 +1,4 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
-import ogImage from "~/assets/meta/index.jpg";
-import indexImage from "~/assets/images/index.png";
 import { links } from "~/data/pages/links/links";
 import { breadcrumbLinks } from "~/utils/breadcrumb";
 import { useEffect } from "react";
@@ -14,7 +12,7 @@ export const meta: MetaFunction = () => ({
   title: "Links - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Me liga, me manda um telegramaaaa...",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/index.jpg`,
   "og:title": "Links",
   "og:description": "Me liga, me manda um telegramaaaa...",
   "og:url": "https://owilliamgoncalves.dev/skills",
@@ -24,7 +22,7 @@ export const meta: MetaFunction = () => ({
 
 export const loader: LoaderFunction = async () => {
   return {
-    indexImage,
+    indexImage: "/assets/images/index.png",
     links,
   };
 };

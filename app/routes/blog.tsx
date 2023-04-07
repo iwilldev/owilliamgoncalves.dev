@@ -3,7 +3,6 @@ import type { MetaFunction } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useEffect } from "react";
-import ogImage from "~/assets/meta/blog.jpg";
 import { BlogPage } from "~/features/BlogPage";
 import { breadcrumbBlog } from "~/utils/breadcrumb";
 import { useBreadcrumb } from "~/hooks/useBreadcrumb";
@@ -14,7 +13,7 @@ export const meta: MetaFunction = () => ({
   title: "Blog - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Meus artigos publicados na Dev Community",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/blog.jpg`,
   "og:title": "Blog",
   "og:description": "Meus artigos publicados na Dev Community",
   "og:url": "https://owilliamgoncalves.dev/blog",

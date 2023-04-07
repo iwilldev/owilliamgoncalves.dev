@@ -3,7 +3,6 @@ import type { MetaFunction } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { useEffect } from "react";
-import ogImage from "~/assets/meta/curriculo.jpg";
 import { courses } from "~/data/pages/curriculo/courses.server";
 import { educations } from "~/data/pages/curriculo/educations.server";
 import { experiences } from "~/data/pages/curriculo/experiences.server";
@@ -17,7 +16,7 @@ export const meta: MetaFunction = () => ({
   title: "Currículo - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Minha trajetória e experiências até aqui",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/curriculo.jpg`,
   "og:title": "Currículo",
   "og:description": "Minha trajetória e experiências até aqui",
   "og:url": "https://owilliamgoncalves.dev/curriculo",

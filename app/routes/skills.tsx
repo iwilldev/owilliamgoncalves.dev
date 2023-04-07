@@ -1,5 +1,4 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
-import ogImage from "~/assets/meta/skills.jpg";
 import { proSkills } from "~/data/pages/skills/pro";
 import { beginnerSkills } from "~/data/pages/skills/beginner";
 import { studySkills } from "~/data/pages/skills/study";
@@ -16,7 +15,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Ferramentas que já usei no trabalho, em projetos pessoais e que tenho estudado sobre",
-  "og:image": `https://owilliamgoncalves.dev${ogImage}`,
+  "og:image": `https://owilliamgoncalves.dev/assets/meta/skills.jpg`,
   "og:title": "Skills",
   "og:description":
     "Ferramentas que já usei no trabalho, em projetos pessoais e que tenho estudado sobre",
