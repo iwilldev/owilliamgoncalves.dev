@@ -98,6 +98,7 @@ export type CurriculoPageProps = {
 export type LayoutContextProps = {
   breadcrumb: BreadcrumbProps[];
   setBreadcrumb: (breadcrumb: BreadcrumbProps[]) => void;
+  toggleMenu: () => void;
 };
 
 export type LinkProps = {

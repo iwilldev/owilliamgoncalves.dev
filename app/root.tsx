@@ -14,6 +14,9 @@ import { SectionRight } from "./components/layout/SectionRight";
 import { LayoutNavbar } from "./components/layout/LayoutNavbar";
 import { useState } from "react";
 import type { BreadcrumbProps } from "./utils/types";
+import menuLinks from "./data/shared/menuLinks";
+import { Prose } from "./components/common/Prose";
+import { Title } from "./components/common/Title";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -53,7 +56,7 @@ export function CatchBoundary() {
             </p>
             <Link
               to="/"
-              className="mt-5 mb-10 text-xl text-primary-content underline"
+              className="mb-10 mt-5 text-xl text-primary-content underline"
             >
               Clique aqui, para voltar do começo
             </Link>
@@ -98,7 +101,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
             </p>
             <Link
               to="/"
-              className="mt-5 mb-10 text-xl text-primary-content underline"
+              className="mb-10 mt-5 text-xl text-primary-content underline"
             >
               Clique aqui, para voltar do começo
             </Link>
@@ -138,10 +141,19 @@ export function links() {
   ];
 }
 
+const openMenuClasses =
+  "fixed origin-top translate-y-[120px] -translate-x-[50vw] lg:-translate-x-[20vw] scale-75 pointer-events-none";
+
 export default function App() {
   const [breadcrumb, setBreadcrumb] = useState<BreadcrumbProps[]>([
     { label: "owilliamgoncalves.dev", href: "/" },
   ]);
+  const [menuOpened, setMenuOpened] = useState(false);
+  const toggleMenu = () => {
+    setTimeout(() => {
+      setMenuOpened(!menuOpened);
+    }, 100);
+  };
   return (
     <html lang="pt-br" className="h-full w-full">
       <head>
@@ -149,8 +161,33 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full w-full scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-primary">
-        <LayoutNavbar breadcrumb={breadcrumb} />
-        <div className="flex flex-col items-center overflow-x-hidden">
+        <LayoutNavbar breadcrumb={breadcrumb} toggleMenu={toggleMenu} />
+        <div
+          className={`fixed flex h-full w-full items-center justify-end bg-base-content ${
+            menuOpened ? "flex" : "hidden"
+          }`}
+        >
+          <ul className="w-60">
+            {menuLinks.map((link) => (
+              <li key={link.label} onClick={toggleMenu}>
+                <Link to={link.href} prefetch="intent">
+                  <Prose>
+                    <Title
+                      variant="h3"
+                      className="text-base-100"
+                      text={link.label}
+                    />
+                  </Prose>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          className={`flex flex-col items-center overflow-x-hidden bg-base-100 transition-all duration-700 ${
+            menuOpened ? openMenuClasses : ""
+          }`}
+        >
           <Outlet context={{ breadcrumb, setBreadcrumb }} />
         </div>
         <ScrollRestoration />

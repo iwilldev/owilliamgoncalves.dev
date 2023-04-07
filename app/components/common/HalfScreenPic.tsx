@@ -11,7 +11,7 @@ export function HalfScreenPic({
 }) {
   return (
     <div
-      className={`non-animate absolute right-0 top-0 -z-10 mx-auto h-[100vh] w-[100vw] border-l-[1px] border-base-100 bg-base-300 opacity-10 animation-duration-1000 lg:bottom-0 lg:h-[100vh] lg:w-[50vw] lg:opacity-100 ${className}`}
+      className={`non-animate absolute right-0 top-0 z-0 mx-auto h-[100vh] w-[100vw] border-l-[1px] border-base-100 bg-base-300 opacity-10 animation-duration-1000 lg:bottom-0 lg:h-[100vh] lg:w-[50vw] lg:opacity-100 ${className}`}
     >
       <img
         className={`h-full w-full object-contain ${
