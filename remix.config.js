@@ -9,5 +9,5 @@ module.exports = {
   // appDirectory: "app",
   assetsBuildDirectory: "public/build/vercel/path0",
   // serverBuildPath: "api/index.js",
-  // publicPath: "/build/",
+  publicPath: "/build/vercel/path0",
 };
