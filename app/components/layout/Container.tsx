@@ -25,7 +25,7 @@ export function Container({
   return (
     <article
       id={id}
-      className={`container flex h-full min-h-[100vh] w-[100vw] gap-20 py-32 px-16 first-of-type:pt-40 lg:flex-row ${
+      className={`container flex h-full min-h-[100vh] w-[100vw] gap-20 px-8 pb-40 pt-24 lg:flex-row lg:pb-24 lg:pt-40 ${
         colReverse ? "flex-col-reverse" : "flex-col"
       }`}
     >

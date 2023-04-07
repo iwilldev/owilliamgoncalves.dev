@@ -1,4 +1,5 @@
 import { BounceButton } from "~/components/common/BounceButton";
+import { HalfScreenPic } from "~/components/common/HalfScreenPic";
 import { ProfilePic } from "~/components/common/ProfilePic";
 import { Prose } from "~/components/common/Prose";
 import { Title } from "~/components/common/Title";
@@ -10,14 +11,18 @@ import type { SobrePageProps } from "~/utils/types";
 
 export const SobrePage = ({ data }: { data: SobrePageProps }) => (
   <>
-    <Container id="inicio">
+    <Container id="inicio" colReverse>
+      <HalfScreenPic
+        src="/assets/images/sobre.webp"
+        alt="William Gonçalves, homem branco de barba sorrindo, enquanto segura um teclado com uma das mãos e faz chifres com a outra mão. Usa camisa e boné vermelhos"
+      />
       <SectionLeft>
         <Prose>
           <Title variant="h1" text="Sobre" className="text-primary" />
         </Prose>
+        <BounceButton href="#familia" />
       </SectionLeft>
       <SectionRight>
-        <BounceButton href="#familia" />
       </SectionRight>
     </Container>
     <Container id="familia" colReverse>

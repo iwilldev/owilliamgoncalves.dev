@@ -15,7 +15,7 @@ export function LayoutNavbar({
     }
   };
   return (
-    <div className="navbar rounded-tl-box fixed z-20 bg-base-300">
+    <div className="navbar fixed bottom-0 z-20 border-b-0 border-t-[1px] border-base-content border-opacity-50 bg-base-300 lg:bottom-auto lg:top-0 lg:border-b-[1px] lg:border-t-0">
       <div className="flex-1 px-2 lg:flex-none">
         {breadcrumb.map((item, index) => (
           <div

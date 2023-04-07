@@ -1,4 +1,4 @@
-import { ProfilePic } from "~/components/common/ProfilePic";
+import { HalfScreenPic } from "~/components/common/HalfScreenPic";
 import { Prose } from "~/components/common/Prose";
 import { Title } from "~/components/common/Title";
 import { Container } from "~/components/layout/Container";
@@ -14,11 +14,10 @@ export const IndexPage = ({ data }: { data: IndexPageProps }) => (
         <p className="mt-0 block">{data.indexText}</p>
       </Prose>
     </SectionLeft>
-    <SectionRight>
-      <ProfilePic
-        src={data.indexImage}
-        alt="William Gonçalves, homem branco de barba sorrindo, enquanto segura um teclado com as mão. Usa camisa e boné vermelhos"
-      />
-    </SectionRight>
+    <SectionRight>{null}</SectionRight>
+    <HalfScreenPic
+      src={data.indexImage}
+      alt="William Gonçalves, homem branco de barba sorrindo, enquanto segura um teclado com as mãos. Usa camisa e boné vermelhos"
+    />
   </Container>
 );

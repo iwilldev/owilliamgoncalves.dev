@@ -11,7 +11,6 @@ import styles from "./styles/app.css";
 import { Container } from "./components/layout/Container";
 import { SectionLeft } from "./components/layout/SectionLeft";
 import { SectionRight } from "./components/layout/SectionRight";
-import { LayoutBackground } from "./components/layout/LayoutBackground";
 import { LayoutNavbar } from "./components/layout/LayoutNavbar";
 import { useState } from "react";
 import type { BreadcrumbProps } from "./utils/types";
@@ -41,7 +40,6 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body className="flex h-full w-full justify-center">
-        <LayoutBackground />
         <Container>
           <SectionLeft>
             <h1 className="mt-auto text-4xl font-bold text-stone-400">
@@ -88,7 +86,6 @@ export function ErrorBoundary({ error }: { error: Error }) {
         <Links />
       </head>
       <body className="flex h-full w-full justify-center">
-        <LayoutBackground />
         <Container>
           <SectionLeft>
             <h1 className="mt-auto text-4xl font-bold text-stone-400">
@@ -153,8 +150,7 @@ export default function App() {
       </head>
       <body className="h-full w-full scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-primary">
         <LayoutNavbar breadcrumb={breadcrumb} />
-        <LayoutBackground />
-        <div className="flex flex-1 flex-col items-center overflow-x-hidden">
+        <div className="flex flex-col items-center overflow-x-hidden">
           <Outlet context={{ breadcrumb, setBreadcrumb }} />
         </div>
         <ScrollRestoration />

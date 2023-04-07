@@ -1,5 +1,6 @@
 import { BlogCard } from "~/components/blog/BlogCard";
 import { BounceButton } from "~/components/common/BounceButton";
+import { HalfScreenPic } from "~/components/common/HalfScreenPic";
 import { Prose } from "~/components/common/Prose";
 import { Title } from "~/components/common/Title";
 import { Container } from "~/components/layout/Container";
@@ -9,7 +10,12 @@ import type { BlogPageProps } from "~/utils/types";
 
 export const BlogPage = ({ data }: { data: BlogPageProps }) => (
   <>
-    <Container>
+    <HalfScreenPic
+      src="/assets/images/blog.webp"
+      alt="William Gonçalves, homem branco de barba sorrindo, enquanto segura um microfone. Usa camisa e boné vermelhos"
+      placeLeft
+    />
+    <Container colReverse>
       <SectionLeft>
         <Prose>
           <Title variant="h1" text="Blog" className="text-primary" />
@@ -17,10 +23,9 @@ export const BlogPage = ({ data }: { data: BlogPageProps }) => (
             Confira meus artigos publicados na Dev Community
           </p>
         </Prose>
-      </SectionLeft>
-      <SectionRight>
         <BounceButton href="#posts" />
-      </SectionRight>
+      </SectionLeft>
+      <SectionRight>{null}</SectionRight>
     </Container>
     <Container id="posts">
       <SectionLeft>

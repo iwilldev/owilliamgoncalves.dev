@@ -1,90 +1,122 @@
 export const proSkills = [
   {
-    label: 'Remix',
+    label: "Remix",
     src: "/assets/images/skills/pro/remix.png",
   },
   {
-    label: 'React',
+    label: "React",
     src: "/assets/images/skills/pro/react.png",
   },
   {
-    label: 'Vue.js',
+    label: "Vue.js",
     src: "/assets/images/skills/pro/vuejs.png",
   },
   {
-    label: 'TypeScript',
+    label: "Tailwind CSS",
+    src: "/assets/images/skills/beginner/tailwindcss.png",
+  },
+  {
+    label: "Next.js",
+    src: "/assets/images/skills/beginner/nextjs.png",
+  },
+  {
+    label: "Vite",
+    src: "/assets/images/skills/beginner/vite.png",
+  },
+  {
+    label: "TypeScript",
     src: "/assets/images/skills/pro/typescript.png",
   },
   {
-    label: 'JavaScript',
+    label: "JavaScript",
     src: "/assets/images/skills/pro/javascript.png",
   },
   {
-    label: 'HTML5',
+    label: "HTML5",
     src: "/assets/images/skills/pro/html5.png",
   },
   {
-    label: 'CSS3',
+    label: "CSS3",
     src: "/assets/images/skills/pro/css3.png",
   },
   {
-    label: 'Nuxt.js',
+    label: "Nuxt.js",
     src: "/assets/images/skills/pro/nuxtjs.png",
   },
   {
-    label: 'Node.js',
+    label: "Node.js",
     src: "/assets/images/skills/pro/nodejs.png",
   },
   {
-    label: 'Express.js',
+    label: "Express.js",
     src: "/assets/images/skills/pro/express.png",
   },
   {
-    label: 'Material UI',
+    label: "Material UI",
     src: "/assets/images/skills/pro/materialui.png",
   },
   {
-    label: 'GraphQL',
+    label: "GraphQL",
     src: "/assets/images/skills/pro/graphql.png",
   },
   {
-    label: 'GitHub',
+    label: "GitHub",
     src: "/assets/images/skills/pro/github.png",
   },
   {
-    label: 'Git',
+    label: "Git",
     src: "/assets/images/skills/pro/git.png",
   },
   {
-    label: 'NPM',
+    label: "NPM",
     src: "/assets/images/skills/pro/npm.png",
   },
   {
-    label: 'Yarn',
+    label: "Yarn",
     src: "/assets/images/skills/pro/yarn.png",
   },
   {
-    label: 'Jest',
+    label: "Jest",
     src: "/assets/images/skills/pro/jest.png",
   },
   {
-    label: 'ESLint',
+    label: "ESLint",
     src: "/assets/images/skills/pro/eslint.png",
   },
   {
-    label: 'Sass',
+    label: "Sass",
     src: "/assets/images/skills/pro/sass.png",
   },
   {
-    label: 'VS Code',
+    label: "Pinia",
+    src: "/assets/images/skills/beginner/pinia.png",
+  },
+  {
+    label: "SQLite",
+    src: "/assets/images/skills/beginner/sqlite.png",
+  },
+  {
+    label: "PostgreSQL",
+    src: "/assets/images/skills/beginner/postgresql.png",
+  },
+  {
+    label: "Firebase",
+    src: "/assets/images/skills/beginner/firebase.png",
+  },
+  {
+    label: "VS Code",
     src: "/assets/images/skills/pro/vscode.png",
   },
   {
-    label: 'Slack',
+    label: "Slack",
     src: "/assets/images/skills/pro/slack.png",
   },
   {
-    label: 'Jira',
+    label: "Jira",
     src: "/assets/images/skills/pro/jira.png",
-  }
-]
+  },
+  {
+    label: "Figma",
+    src: "/assets/images/skills/beginner/figma.png",
+  },
+];
