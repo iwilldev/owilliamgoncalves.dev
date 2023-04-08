@@ -5,7 +5,6 @@ import {
   LiveReload,
   Meta,
   Scripts,
-  ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./styles/app.css";
 import { Navbar } from "./components/layout/Navbar";
@@ -82,7 +81,6 @@ export default function App() {
         <Main menuOpened={menuOpened}>
           <Outlet context={{ breadcrumb, setBreadcrumb }} />
         </Main>
-        <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
