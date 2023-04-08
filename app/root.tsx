@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link, Outlet, useCatch } from "@remix-run/react";
+import { Outlet, useCatch } from "@remix-run/react";
 import {
   Links,
   LiveReload,
@@ -8,15 +8,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./styles/app.css";
-import { Container } from "./components/layout/Container";
-import { SectionLeft } from "./components/layout/SectionLeft";
-import { SectionRight } from "./components/layout/SectionRight";
-import { LayoutNavbar } from "./components/layout/LayoutNavbar";
+import { Navbar } from "./components/layout/Navbar";
 import { useState } from "react";
 import type { BreadcrumbProps } from "./utils/types";
-import menuLinks from "./data/shared/menuLinks";
-import { Prose } from "./components/common/Prose";
-import { Title } from "./components/common/Title";
+import { Menu } from "./components/layout/Menu";
+import { Main } from "./components/layout/Main";
+import { Error } from "./components/boundaries/Error";
+import { Catch } from "./components/boundaries/Catch";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -35,90 +33,11 @@ export const meta: MetaFunction = () => ({
 
 export function CatchBoundary() {
   const caught = useCatch();
-  return (
-    <html lang="pt-br" className="h-full w-full">
-      <head>
-        <title>{caught.statusText}</title>
-        <Meta />
-        <Links />
-      </head>
-      <body className="flex h-full w-full justify-center">
-        <Container>
-          <SectionLeft>
-            <h1 className="mt-auto text-4xl font-bold text-stone-400">
-              Mermão! Que rolê foi esse?
-            </h1>
-            <p className="mt-10 text-xl text-stone-400">
-              É estranho que tenhamos chegado até aqui. Como todos os scripts
-              dessa página foram revisados em voz alta pelo Cidão Moreira, é
-              provável que algum erro de digitação ou um problema de autorização
-              tenha direcionado sua navegação pra cá. Mas relaxa!
-            </p>
-            <Link
-              to="/"
-              className="mb-10 mt-5 text-xl text-primary-content underline"
-            >
-              Clique aqui, para voltar do começo
-            </Link>
-            <pre>
-              <code>Status: {caught.status}</code>
-            </pre>
-            <pre>
-              <code>{JSON.stringify(caught.data, null, 2)}</code>
-            </pre>
-          </SectionLeft>
-          <SectionRight>
-            <img
-              src="/assets/images/ronaldinho-gaucho.jpg"
-              alt=""
-              className="ml-auto h-96 w-96 rounded-full object-cover object-top"
-            />
-          </SectionRight>
-        </Container>
-      </body>
-    </html>
-  );
+  return <Catch caught={caught} />;
 }
 
 export function ErrorBoundary({ error }: { error: Error }) {
-  return (
-    <html lang="pt-br" className="h-full w-full">
-      <head>
-        <title>{error.name}</title>
-        <Meta />
-        <Links />
-      </head>
-      <body className="flex h-full w-full justify-center">
-        <Container>
-          <SectionLeft>
-            <h1 className="mt-auto text-4xl font-bold text-stone-400">
-              Rapaz! Deu ruim...
-            </h1>
-            <p className="mt-10 text-xl text-stone-400">
-              Tem um V8 rodando aqui embaixo. Mas parece que alguma coisa
-              desconjuntou a rebimboca da parafuseta. O erro detalhado está logo
-              abaixo.
-            </p>
-            <Link
-              to="/"
-              className="mb-10 mt-5 text-xl text-primary-content underline"
-            >
-              Clique aqui, para voltar do começo
-            </Link>
-            <code>{error.message}</code>
-            <code>{JSON.stringify(error.stack, null, 2)}</code>
-          </SectionLeft>
-          <SectionRight>
-            <img
-              src="/assets/images/plift.jpg"
-              alt=""
-              className="rounded-box ml-auto h-96 w-96 object-cover object-top"
-            />
-          </SectionRight>
-        </Container>
-      </body>
-    </html>
-  );
+  return <Error error={error} />;
 }
 
 export function links() {
@@ -141,9 +60,6 @@ export function links() {
   ];
 }
 
-const openMenuClasses =
-  "fixed origin-top translate-y-[120px] -translate-x-[50vw] lg:-translate-x-[20vw] scale-75 pointer-events-none";
-
 export default function App() {
   const [breadcrumb, setBreadcrumb] = useState<BreadcrumbProps[]>([
     { label: "owilliamgoncalves.dev", href: "/" },
@@ -160,36 +76,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full w-full scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-primary">
-        <LayoutNavbar breadcrumb={breadcrumb} toggleMenu={toggleMenu} />
-        <div
-          className={`fixed flex h-full w-full items-center justify-end bg-base-content ${
-            menuOpened ? "flex" : "hidden"
-          }`}
-        >
-          <ul className="w-60">
-            {menuLinks.map((link) => (
-              <li key={link.label} onClick={toggleMenu}>
-                <Link to={link.href} prefetch="intent">
-                  <Prose>
-                    <Title
-                      variant="h3"
-                      className="text-base-100"
-                      text={link.label}
-                    />
-                  </Prose>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div
-          className={`flex flex-col items-center overflow-x-hidden bg-base-100 transition-all duration-700 ${
-            menuOpened ? openMenuClasses : ""
-          }`}
-        >
+      <body className="h-full w-full overflow-hidden bg-base-content">
+        <Navbar breadcrumb={breadcrumb} toggleMenu={toggleMenu} />
+        <Menu menuOpened={menuOpened} toggleMenu={toggleMenu} />
+        <Main menuOpened={menuOpened}>
           <Outlet context={{ breadcrumb, setBreadcrumb }} />
-        </div>
+        </Main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
