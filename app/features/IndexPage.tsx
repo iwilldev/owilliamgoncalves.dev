@@ -9,9 +9,9 @@ import type { IndexPageProps } from "~/utils/types";
 export const IndexPage = ({ data }: { data: IndexPageProps }) => (
   <Container colReverse>
     <SectionLeft>
-      <Prose>
+      <Prose className="absolute top-24 mr-8 lg:relative">
         <Title variant="h1" text="William Gonçalves" className="text-primary" />
-        <p className="mt-0 block">{data.indexText}</p>
+        <p className="mt-0 block mb-auto">{data.indexText}</p>
       </Prose>
     </SectionLeft>
     <SectionRight>{null}</SectionRight>
