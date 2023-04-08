@@ -29,7 +29,7 @@ export function Navbar({
         ))}
       </div>
       {isLoading ? (
-        <progress className="progress progress-primary absolute left-1/2 top-1/2 mx-auto w-24 -translate-x-1/2 -translate-y-1/2"></progress>
+        <progress className="progress progress-primary absolute left-3/4 top-1/2 mx-auto w-6 -translate-y-1/2 translate-x-3/4 lg:left-1/2 lg:w-24 lg:-translate-x-1/2"></progress>
       ) : null}
       <label
         className="btn-primary btn-ghost btn-circle btn"
