@@ -12,10 +12,10 @@ export const meta: MetaFunction = () => ({
   title: "Links - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Me liga, me manda um telegramaaaa...",
-  "og:image": `https://owilliamgoncalves.dev/assets/meta/index.jpg`,
+  "og:image": `https://owillgoncalves.dev/assets/meta/index.jpg`,
   "og:title": "Links",
   "og:description": "Me liga, me manda um telegramaaaa...",
-  "og:url": "https://owilliamgoncalves.dev/skills",
+  "og:url": "https://owillgoncalves.dev/skills",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
 });

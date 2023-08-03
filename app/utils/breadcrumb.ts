@@ -1,5 +1,5 @@
 export const breadcrumbIndex = [
-  { label: "owilliamgoncalves.dev", href: "/" },
+  { label: "owillgoncalves.dev", href: "/" },
 ];
 
 export const breadcrumbBlog = [

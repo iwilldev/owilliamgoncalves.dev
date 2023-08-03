@@ -15,7 +15,7 @@ export const meta: MetaFunction = ({ data }) => ({
   "og:image": data.cover_image || data.social_image,
   "og:title": data.title,
   "og:description": data.description,
-  "og:url": `https://owilliamgoncalves.dev/blog${data.path}`,
+  "og:url": `https://owillgoncalves.dev/blog${data.path}`,
   "og:site_name": "William Gonçalves",
   "og:type": "article",
 });

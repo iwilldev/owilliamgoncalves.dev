@@ -9,12 +9,12 @@ export const links: LinkProps[] = [
   {
     icon: "",
     label: "E-mail",
-    href: "mailto:owilliamgoncalves@outlook.com",
+    href: "mailto:owillgoncalves@outlook.com",
   },
   {
     icon: "",
     label: "Telegram",
-    href: "https://t.me/owilliamgoncalves",
+    href: "https://t.me/owillgoncalves",
   },
   {
     icon: "",
@@ -24,21 +24,21 @@ export const links: LinkProps[] = [
   {
     icon: "",
     label: 'Instagram',
-    href: 'https://instagram.com/owilliamgoncalves',
+    href: 'https://instagram.com/owillgoncalves',
   },
   {
     icon: "",
     label: 'GitHub',
-    href: 'https://github.com/owilliamgoncalves',
+    href: 'https://github.com/owillgoncalves',
   },
   {
     icon: "",
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/owilliamgoncalves/',
+    href: 'https://www.linkedin.com/in/owillgoncalves/',
   },
   {
     icon: "",
     label: 'Dev Community',
-    href: 'https://dev.to/owilliamgoncalves',
+    href: 'https://dev.to/owillgoncalves',
   },
 ]

@@ -20,11 +20,11 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Flamenguista e carioca, que divide a vida entre a Zona Oeste do Rio de Janeiro e a Zona Leste de São Paulo",
-  "og:image": `https://owilliamgoncalves.dev/assets/meta/sobre.jpg`,
+  "og:image": `https://owillgoncalves.dev/assets/meta/sobre.jpg`,
   "og:title": "Sobre",
   "og:description":
     "Flamenguista e carioca, que divide a vida entre a Zona Oeste do Rio de Janeiro e a Zona Leste de São Paulo",
-  "og:url": "https://owilliamgoncalves.dev/sobre",
+  "og:url": "https://owillgoncalves.dev/sobre",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
 });
