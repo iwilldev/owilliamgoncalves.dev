@@ -69,6 +69,11 @@ export default function App() {
       setMenuOpened(!menuOpened);
     }, 100);
   };
+  const closeMenu = () => {
+    setTimeout(() => {
+      setMenuOpened(false);
+    })
+  }
   return (
     <html lang="pt-br" className="h-full w-full">
       <head>
@@ -77,7 +82,7 @@ export default function App() {
       </head>
       <body className="h-full w-full overflow-hidden bg-base-content">
         <Navbar breadcrumb={breadcrumb} toggleMenu={toggleMenu} />
-        <Menu menuOpened={menuOpened} toggleMenu={toggleMenu} />
+        <Menu menuOpened={menuOpened} toggleMenu={toggleMenu} closeMenu={closeMenu} />
         <Main menuOpened={menuOpened}>
           <Outlet context={{ breadcrumb, setBreadcrumb }} />
         </Main>
