@@ -20,11 +20,11 @@ export const meta: MetaFunction = () => ({
   title: "William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description:
-    "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",
+    "Carioca, Pai do Pedro, centralizador de div e flamenguista",
   "og:image": `https://owillgoncalves.dev/assets/meta/index.jpg`,
   "og:title": "William Gonçalves",
   "og:description":
-    "Carioca, Pai do Pedro, namorido da Laurinha, centralizador de div e flamenguista",
+    "Carioca, Pai do Pedro, centralizador de div e flamenguista",
   "og:url": "https://owillgoncalves.dev",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
