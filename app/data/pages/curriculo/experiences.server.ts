@@ -9,6 +9,13 @@ export const experiences: ExperienceProps[] = [
     description: `Desenvolvimento de aplicações front-end utilizando Next.js, React, Tailwind, Storybook e Vitest.`
   },
   {
+    company: "Graffias",
+    role: "Desenvolvedor Web / Designer (Autônomo)",
+    startDate: "AGOSTO/2016",
+    endDate: "FEVEREIRO/2021",
+    description: `Desenvolvimento de páginas e aplicações com foco em web, responsividade, UI e UX, tendo o JavaScript como principal linguagem utilizada nos projetos, além de Remix, ReactJs, Vue.js, HTML, CSS, Sass, Nuxt.js, entre outros.`
+  },
+  {
     company: "Virgo Inc",
     role: "Desenvolvedor Front-End Pleno",
     startDate: "JULHO/2022",
@@ -32,22 +39,6 @@ export const experiences: ExperienceProps[] = [
     startDate: "JUNHO/2021",
     endDate: "NOVEMBRO/2021",
     description: `Desenvolvimento de aplicações front-end utilizando React e TypeScript, ferramentas e dependências como Apollo/GraphQL, Cypress, Formik/Yup e Material-UI, além de conceitos/fundamentos de TDD/BDD, Clean Code, SOLID, composição e reutilização de código e componentes.`
-  },
-  {
-    company: "D-Miner",
-    role: "Desenvolvedor Front-End Júnior",
-    startDate: "FEVEREIRO/2021",
-    endDate: "JUNHO/2021",
-    description: `Criação de aplicações front-end utilizando, prioritariamente, Vue.js, JavaScript e Sass, além de técnicas como componentização, modularização de código e gerenciamento de estado, tendo uma atuação majoritária na engenharia e estruturação da aplicação.`
-  },
-  {
-    company: "Karioka | Freelancer / Autônomo",
-    role: "Desenvolvedor Front-End / Designer",
-    startDate: "AGOSTO/2016",
-    endDate: "FEVEREIRO/2021",
-    description: `Desenvolvimento de páginas e aplicações com foco em web, responsividade, UI e UX, tendo o JavaScript como principal linguagem utilizada nos projetos, além de ReactJs, Vue.js, HTML, CSS, Sass, Nuxt.js, entre outros.
-
-    Designer gráfico, criador de marca, identidade visual, entre outras demandas, com alguns bons trabalhos entregues, incluindo o primeiro mapa da Moovit de transporte metropolitano do Rio de Janeiro, que rendeu uma matéria no Jornal O Dia, na época.`
   },
   {
     company: "Experiência Anterior",
