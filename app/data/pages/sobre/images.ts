@@ -17,24 +17,6 @@ const aboutFamilyImages = [
     size: 'w-48 lg:w-64',
     src: "/assets/images/sobre-2.jpg",
   },
-  {
-    alt: 'Henry, Pedro, Laura e William. Os quatro usam máscaras e estão de pé, na plataforma de uma estação do metrô',
-    duration: '1000',
-    mask: 'mask-heart',
-    place: '',
-    vars: '[--rotate-photo:24deg]',
-    size: 'w-48 lg:w-64',
-    src: "/assets/images/sobre-3.jpg",
-  },
-  {
-    alt: 'William e Laura, com casacos azuis, sorrindo para a câmera. William usa óculos e um boné vermelho. Laura usa tranças no penteado',
-    duration: '700',
-    mask: 'mask-heart',
-    place: 'ml-auto',
-    vars: '[--rotate-photo:-24deg]',
-    size: 'w-48 lg:w-64',
-    src: "/assets/images/sobre-4.jpg",
-  }
 ];
 
 const aboutBanger = "/assets/images/sobre-banger.png";

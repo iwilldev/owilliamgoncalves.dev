@@ -1,9 +1,9 @@
 export const aboutText1 = `
-Flamenguista e carioca, que divide a vida entre a Zona Oeste do Rio de Janeiro e a Zona Leste de São Paulo.
+Flamenguista e carioca, cria da Zona Norte e morador da Zona Oeste do Rio de Janeiro.
 
 Graduando em Desenvolvimento Web e Desenvolvedor Front-End que dá pitaco em Design, Produto e têm se aprofundado em stacks de Back-End e assuntos mais densos.
 
-Pai do Pedro (o ariano mais porreta do mundo) que tem sido meu combustível pra viver, desde que nasceu. Marido da Laurinha, meu amor, alma gêmea e minha melhor amiga. E padrasto do Henry, o jovenzinho mais inteligente que conheço.
+Pai do Pedro (o ariano mais porreta do mundo) que tem sido meu combustível pra viver, desde que nasceu.
 `;
 
 export const aboutText2 = `
