@@ -9,36 +9,36 @@ export const links: LinkProps[] = [
   {
     icon: "",
     label: "E-mail",
-    href: "mailto:owillgoncalves@outlook.com",
+    href: "mailto:iwilldev@outlook.com.br",
   },
   {
     icon: "",
     label: "Telegram",
-    href: "https://t.me/owillgoncalves",
+    href: "https://t.me/iwilldev",
   },
   {
     icon: "",
     label: 'Twitter',
-    href: 'https://twitter.com/owillgoncalves',
+    href: 'https://twitter.com/iwilldev_',
   },
   {
     icon: "",
     label: 'Instagram',
-    href: 'https://instagram.com/owillgoncalves',
+    href: 'https://instagram.com/iwilldev',
   },
   {
     icon: "",
     label: 'GitHub',
-    href: 'https://github.com/owillgoncalves',
+    href: 'https://github.com/iwilldev',
   },
   {
     icon: "",
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/owillgoncalves/',
+    href: 'https://www.linkedin.com/in/iwilldev/',
   },
   {
     icon: "",
     label: 'Dev Community',
-    href: 'https://dev.to/owillgoncalves',
+    href: 'https://dev.to/iwilldev',
   },
 ]

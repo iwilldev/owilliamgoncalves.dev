@@ -15,11 +15,11 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Ferramentas que já usei no trabalho, em projetos pessoais e que tenho estudado sobre",
-  "og:image": `https://owillgoncalves.dev/assets/meta/skills.jpg`,
+  "og:image": `https://iwill.dev/assets/meta/skills.jpg`,
   "og:title": "Skills",
   "og:description":
     "Ferramentas que já usei no trabalho, em projetos pessoais e que tenho estudado sobre",
-  "og:url": "https://owillgoncalves.dev/skills",
+  "og:url": "https://iwill.dev/skills",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
 });

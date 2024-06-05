@@ -21,11 +21,11 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
   description:
     "Carioca, Pai do Pedro, centralizador de div e flamenguista",
-  "og:image": `https://owillgoncalves.dev/assets/meta/index.jpg`,
+  "og:image": `https://iwill.dev/assets/meta/index.jpg`,
   "og:title": "William Gonçalves",
   "og:description":
     "Carioca, Pai do Pedro, centralizador de div e flamenguista",
-  "og:url": "https://owillgoncalves.dev",
+  "og:url": "https://iwill.dev",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
 });
@@ -61,7 +61,7 @@ export function links() {
 
 export default function App() {
   const [breadcrumb, setBreadcrumb] = useState<BreadcrumbProps[]>([
-    { label: "owillgoncalves.dev", href: "/" },
+    { label: "iwill.dev", href: "/" },
   ]);
   const [menuOpened, setMenuOpened] = useState(false);
   const toggleMenu = () => {

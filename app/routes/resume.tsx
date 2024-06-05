@@ -16,10 +16,10 @@ export const meta: MetaFunction = () => ({
   title: "Currículo - William Gonçalves",
   viewport: "width=device-width,initial-scale=1",
   description: "Minha trajetória e experiências até aqui",
-  "og:image": `https://owillgoncalves.dev/assets/meta/curriculo.jpg`,
+  "og:image": `https://iwill.dev/assets/meta/curriculo.jpg`,
   "og:title": "Currículo",
   "og:description": "Minha trajetória e experiências até aqui",
-  "og:url": "https://owillgoncalves.dev/curriculo",
+  "og:url": "https://iwill.dev/curriculo",
   "og:site_name": "William Gonçalves",
   "og:type": "website",
 });

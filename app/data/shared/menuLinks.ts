@@ -5,27 +5,23 @@ export interface MenuLinkProps {
 
 const menuLinks: MenuLinkProps[] = [
   {
-    label: "Início",
+    label: "Blog",
     href: "/",
   },
   {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
-    label: "Sobre",
-    href: "/sobre",
+    label: "About",
+    href: "/about",
   },
   {
     label: "Skills",
     href: "/skills",
   },
   {
-    label: "Currículo",
-    href: "/curriculo",
+    label: "Resume",
+    href: "/resume",
   },
   {
-    label: "Contatos / Links",
+    label: "Links",
     href: "/links",
   },
 ];
